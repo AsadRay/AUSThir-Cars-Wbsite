@@ -1,0 +1,414 @@
+/* fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,900&display=swap");
+
+/*-----------------------------
+        Utilities
+------------------------------*/
+:root {
+  --austhir-orange: #ff4604;
+  --austhir-light-orange: #ffece6;
+  --austhir-dark-grey: #222732;
+  --austhir-border-color: #e7edf3;
+  --austhir-devider-color: #50514f;
+  --austhir-nav-text-color: #1b2029;
+  --austhir-dropdown-active-color: #e6e6e6;
+  --austhir-body-bg-color: #eff3fa;
+  --austhir-title-color: #222732;
+  --austhir-card-body-color: #222732;
+  --austhir-card-footer-text-color: #99a1b2;
+  --austhir-login-bg-color: #f2f5fb;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--austhir-body-bg-color);
+  min-height: 100vh;
+}
+
+nav {
+  height: 100px;
+}
+
+section {
+  padding: 80px 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.row {
+  margin: 0;
+}
+
+/*----------------------------------------
+        Featured Button Section Design
+-----------------------------------------*/
+.austhir-btn {
+  position: relative;
+  background-color: var(--austhir-orange);
+  color: white !important;
+  font-weight: 500;
+  padding: 15px 25px;
+  border-radius: 15px;
+}
+
+.austhir-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.15);
+  transform-origin: left;
+  transform: scaleX(0);
+  transition: 0.2s ease-in-out;
+}
+
+.austhir-btn:hover::before {
+  transform: scaleX(1);
+}
+
+input {
+  display: block;
+}
+
+.submit-btn {
+  border: 0;
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+.austhir-alt-btn {
+  background-color: white;
+  border: 2px solid var(--austhir-orange);
+  font-weight: 600;
+  color: var(--austhir-orange) !important;
+}
+
+/*----------------------------------------
+        Austhir Card Design
+-----------------------------------------*/
+.austhir-card {
+  border: 0;
+  background-color: var(--austhir-card-body-color);
+  color: white;
+  border-radius: 15px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.austhir-card-image {
+  overflow: hidden;
+}
+
+.austhir-card img {
+  transition: 0.5s ease-in-out;
+}
+
+.austhir-card:hover img,
+.austhir-card:focus img {
+  transform: scale(1.1);
+}
+
+.austhir-hot-card .austhir-card-image {
+  height: 80%;
+}
+
+.austhir-card-image img {
+  height: 100%;
+  object-fit: cover;
+}
+
+.austhir-hot-card .austhir-card-title {
+  font-weight: 300;
+  font-size: 1.75em;
+}
+.austhir-hot-card .austhir-card-price {
+  font-weight: 700;
+  font-size: 2em;
+}
+
+.austhir-card-title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: 300;
+}
+
+.austhir-card-footer {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  border-color: var(--austhir-devider-color);
+}
+
+.year-badge {
+  background-color: var(--austhir-orange);
+  color: white !important;
+  padding: 8px 15px;
+  border-radius: 10px;
+}
+
+.austhir-footer-info {
+  margin-bottom: 0;
+  color: var(--austhir-card-footer-text-color);
+  font-weight: 300;
+}
+
+.austhir-footer-info + .austhir-footer-info {
+  margin-left: 15px;
+}
+
+/*-----------------------------
+        Header Nav Design
+------------------------------*/
+#nav-bar {
+  transition: 0.3s ease;
+}
+
+#austhir-nav {
+  background-color: #0f141e;
+}
+
+.nav-bg {
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+#austhir-nav .nav-bg {
+  background-color: #0f141e;
+}
+
+.nav-bg.fixed {
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  height: 70px;
+}
+
+#austhir-nav .nav-bg.nav-bg.fixed {
+  background-color: white;
+}
+
+.austhir-nav-item + .austhir-nav-item {
+  margin-left: 20px;
+}
+
+.log-sign-nav-item,
+.log-sign-nav-item a {
+  padding: 0;
+}
+
+.log-sign-nav-item:first-child {
+  padding-right: 10px;
+  border-right: 2px solid var(--austhir-devider-color);
+}
+
+.log-sign-nav-item:last-child {
+  padding-left: 10px;
+}
+
+.log-sign-nav-item .fa-user.me-2 {
+  color: var(--austhir-orange);
+}
+
+.austhir-nav-link {
+  color: white;
+}
+
+.austhir-nav-link.fixed {
+  color: var(--austhir-title-color);
+}
+
+.austhir-nav-link:hover,
+.austhir-nav-link:focus {
+  color: var(--austhir-orange);
+}
+
+#user-session-info-container {
+  position: relative;
+}
+
+#user-session-info {
+  cursor: pointer;
+}
+
+#user-session-info:hover {
+  opacity: 0.6;
+}
+
+#user-session-info .austhir-nav-link:hover {
+  color: white;
+}
+
+.user-image {
+  background-color: white;
+  padding: 10px 15px;
+  border-radius: 50%;
+  border: 2px solid var(--austhir-orange);
+  font-size: 20px;
+  color: var(--austhir-orange);
+}
+
+#session-left-angle {
+  transition: 0.3s ease-in-out;
+}
+
+.session-left-angle-rotate {
+  transform: rotateZ(-90deg);
+}
+
+.user-session-menu {
+  position: absolute;
+  min-width: 150px;
+  background-color: white;
+  border-radius: 10px;
+  top: calc(100% + 10px);
+  right: 0;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  z-index: 9999;
+}
+
+.user-session-menu ul {
+  list-style: none;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.user-session-menu li {
+  width: 100%;
+  padding: 5px 10px;
+  transition: 0.3s ease-in-out;
+}
+
+.user-session-menu li:hover {
+  background-color: var(--austhir-light-orange);
+}
+
+.user-session-menu li:hover .session-link {
+  color: var(--austhir-orange);
+}
+
+.austhir-nav-link.session-link {
+  color: var(--austhir-nav-text-color);
+  transition: 0.3s ease-in-out;
+}
+
+#cart-btn {
+  position: relative;
+  background-color: transparent;
+  border: none;
+  color: var(--austhir-orange);
+  font-size: 25px;
+}
+
+#cart-badge {
+  font-size: 12px;
+  background-color: red;
+}
+
+/*-----------------------------
+        Footer Design
+------------------------------*/
+footer {
+  background-color: var(--austhir-dark-grey);
+  height: 200px;
+  padding: 0 30px;
+}
+
+.copyright-text p {
+  color: white;
+  margin: 0;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.social-link {
+  height: 60px;
+  width: 60px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  background-color: #3b4250;
+  color: white;
+  border-radius: 50%;
+  transition: 0.3s ease-in-out;
+}
+
+.social-link:hover,
+.social-link:focus {
+  background-color: #0f141e;
+  color: white;
+}
+
+.social-link + .social-link {
+  margin-left: 20px;
+}
+
+/*-----------------------------
+        Tablet Design
+------------------------------*/
+@media (max-width: 768px) {
+  .austhir-nav-item,
+  .log-sign-nav-item {
+    text-align: center;
+  }
+
+  .log-sign-nav-item {
+    padding: 0;
+  }
+
+  .log-sign-nav-item,
+  .log-sign-nav-item a {
+    padding: 8px 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .log-sign-nav-item:first-child {
+    border: 0;
+    padding: 0;
+  }
+
+  .log-sign-nav-item:last-child {
+    padding: 0;
+  }
+
+  .austhir-nav-item + .austhir-nav-item {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  #austhir-nav .austhir-nav-link.fixed {
+    color: white;
+  }
+}
+
+/*-----------------------------
+        Mobile Design
+------------------------------*/
+@media (max-width: 576px) {
+  .social-links {
+    margin-top: 20px;
+  }
+}
+
+/*-----------------------------
+        XS Design
+------------------------------*/
+@media (max-width: 300px) {
+  .social-link {
+    height: 45px;
+    width: 45px;
+  }
+}
